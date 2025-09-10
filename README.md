@@ -1,7 +1,7 @@
 📘 Documentação Básica de Flutter
 Foco: Componentes com/sem estado e Comunicação entre Widgets
 
-🔹 1. Estrutura do Projeto
+🟢 1. Estrutura do Projeto
 
 O Flutter organiza a interface em widgets, que podem ser:
 
@@ -15,7 +15,7 @@ No código exemplo temos:
 
 🔹Questionario, Questao, Resposta, Resultado (StatelessWidget) → recebem dados prontos e apenas exibem.
 
-🔹 2. Componentes sem estado (StatelessWidget)
+🟢 2. Componentes sem estado (StatelessWidget)
 
 Um StatelessWidget é usado quando o conteúdo do widget não muda durante a execução.
 
@@ -43,7 +43,7 @@ class Questao extends StatelessWidget {
 
 👉 Aqui, Questao só recebe o texto e exibe, não muda internamente.
 
-🔹 3. Componentes com estado (StatefulWidget)
+🟢 3. Componentes com estado (StatefulWidget)
 
 Um StatefulWidget é usado quando o widget precisa armazenar e modificar valores durante a execução.
 
@@ -74,7 +74,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
 👉 Aqui, _perguntaSelecionada e _pontuacaoTotal são variáveis de estado.
 Sempre que chamamos setState(), o Flutter reconstrói a interface com os novos valores.
 
-🔹 4. Comunicação direta: Pai → Filho
+🟢 4. Comunicação direta: Pai → Filho
 
 A comunicação do componente pai para o filho acontece via parâmetros no construtor.
 
@@ -96,7 +96,7 @@ final void Function(int) quandoResponder;
 
 👉 Isso permite que o pai envie dados prontos para o filho.
 
-🔹 5. Comunicação direta com callback: Filho → Pai
+🟢 5. Comunicação direta com callback: Filho → Pai
 
 Quando precisamos que o filho avise algo ao pai, passamos uma função como parâmetro.
 
@@ -128,21 +128,21 @@ class Resposta extends StatelessWidget {
 
 👉 Aqui temos um callback: ao clicar no botão, o filho chama quandoSelecionado, que na prática executa a função _responder do pai.
 
-🔹 6. Ciclo de Funcionamento do Exemplo
+🟢 6. Ciclo de Funcionamento do Exemplo
 
-PerguntaApp mostra a tela inicial.
+🔹PerguntaApp mostra a tela inicial.
 
-O usuário clica em uma resposta (Resposta).
+🔹O usuário clica em uma resposta (Resposta).
 
-O filho chama a função enviada pelo pai → _responder.
+🔹O filho chama a função enviada pelo pai → _responder.
 
-_responder atualiza o estado (setState).
+🔹_responder atualiza o estado (setState).
 
-O Flutter reconstrói a tela mostrando a próxima pergunta.
+🔹O Flutter reconstrói a tela mostrando a próxima pergunta.
 
-Quando não há mais perguntas, o widget Resultado é exibido.
+🔹Quando não há mais perguntas, o widget Resultado é exibido.
 
-🔹 7. Pontos Fundamentais do Flutter
+🟢 7. Pontos Fundamentais do Flutter
 
 ✅ Tudo é widget → botões, textos, colunas, linhas, etc.
 ✅ Stateless vs Stateful → escolha dependendo da necessidade de estado.
@@ -151,7 +151,7 @@ Quando não há mais perguntas, o widget Resultado é exibido.
 ✅ Comunicação Filho → Pai → funções/callbacks passadas pelo pai.
 ✅ Reatividade → sempre que o estado muda, o Flutter reconstrói os widgets visíveis.
 
-🔹 8. Diagrama Simplificado
+🟢 8. Diagrama Simplificado
 PerguntaApp (StatefulWidget)
  ├── Questionario (StatelessWidget)
  │    ├── Questao (StatelessWidget)
@@ -161,8 +161,8 @@ PerguntaApp (StatefulWidget)
 
 👉 Essa documentação cobre a base essencial para entender o Flutter:
 
-Diferença entre widgets com/sem estado.
+🔹Diferença entre widgets com/sem estado.
 
-Comunicação entre componentes.
+🔹Comunicação entre componentes.
 
-Atualização de interface com setState.
+🔹Atualização de interface com setState.
