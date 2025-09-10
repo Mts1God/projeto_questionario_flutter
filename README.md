@@ -5,15 +5,15 @@ Foco: Componentes com/sem estado e Comunicação entre Widgets
 
 O Flutter organiza a interface em widgets, que podem ser:
 
-StatelessWidget → não mantém estado (imutável).
+🔹StatelessWidget → não mantém estado (imutável).
 
-StatefulWidget → mantém estado (dinâmico, pode mudar com interações).
+🔹StatefulWidget → mantém estado (dinâmico, pode mudar com interações).
 
 No código exemplo temos:
 
-PerguntaApp (StatefulWidget) → gerencia o estado principal (pergunta atual e pontuação).
+🔹PerguntaApp (StatefulWidget) → gerencia o estado principal (pergunta atual e pontuação).
 
-Questionario, Questao, Resposta, Resultado (StatelessWidget) → recebem dados prontos e apenas exibem.
+🔹Questionario, Questao, Resposta, Resultado (StatelessWidget) → recebem dados prontos e apenas exibem.
 
 🔹 2. Componentes sem estado (StatelessWidget)
 
